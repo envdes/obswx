@@ -1,0 +1,9 @@
+numpydoc
+ipython
+nbsphinx
+sphinx_rtd_theme
+recommonmark 
+sphinx-markdown-tables
+pandas
+xarray
+geopy

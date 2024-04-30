@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <!-- Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* height */
+        #map {
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <!-- map container -->
+    <div id="map"></div>
+
+    <script>
+        // initialize Leaflet map
+        var map = L.map('map').setView([53.466667, -2.233333], 8); // 设置初始中心点和缩放级别
+
+        // add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // add maker from CSV file
+        function loadCityMarkers() {
+            var bounds = map.getBounds();
+            var southWest = bounds.getSouthWest();
+            var northEast = bounds.getNorthEast();
+            // 读取CSV文件并解析数据
+            fetch('https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    console.log(csvText); // 打印 CSV 文件内容
+                    var data = parseCSV(csvText);
+                    data.forEach(item => {
+                        var usaF = item[0];
+                        var wban = item[1];
+                        var stationName = item[2];
+                        var country = item[3];
+                        var state = item[4];
+                        var icao = item[5];
+                        var lat = parseFloat(item[6].replace(/"/g, ''));
+                        var lon = parseFloat(item[7].replace(/"/g, ''));
+                        var elevation = parseFloat(item[8].replace(/"/g, ''));
+                        var begin = item[9];
+                        var end = item[10];
+                        // 创建标记点并添加到地图上
+                        if (!isNaN(lon) && !isNaN(lat)) {
+
+                            if (lat > southWest.lat && lat < northEast.lat &&
+                                lon > southWest.lng && lon < northEast.lng) {
+                            
+
+
+                                var name = "<b>USAF:</b> " + usaF + "<br>" +
+                                       "<b>WBAN:</b> " + wban + "<br>" +
+                                       "<b>Station Name:</b> " + stationName + "<br>" +
+                                       "<b>Country:</b> " + country + "<br>" +
+                                       "<b>State:</b> " + state + "<br>" +
+                                       "<b>ICAO:</b> " + icao + "<br>" +
+                                       "<b>Latitude:</b> " + lat + "<br>" +
+                                       "<b>Longitude:</b> " + lon + "<br>" +
+                                       "<b>Elevation:</b> " + elevation + "<br>" +
+                                       "<b>Begin:</b> " + begin + "<br>" +
+                                       "<b>End:</b> " + end;
+                                L.marker([lat, lon]).addTo(map)
+                                    .bindPopup(name); // set popup content
+                            }
+                        }
+                    });
+                })
+                .catch(error => console.error(error));
+        }
+
+        // parse CSV text
+        function parseCSV(csvText) {
+            var lines = csvText.split('\n');
+            var result = [];
+            lines.forEach(line => {
+                var items = line.split(',');
+                result.push(items);
+            });
+            return result;
+        }
+
+        // set initial markers
+        loadCityMarkers();
+
+        // update markers when the map is moved
+        map.on('moveend', function() {
+            loadCityMarkers();
+        });
+    </script>
+<p>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map boundaries are based on OpenStreetMap data and do not imply any political stance by the author.</p>
+</body>
+</html>
