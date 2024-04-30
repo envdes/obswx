@@ -1,9 +1,6 @@
-pyWX: A Python package for obtaining observational meteorology data
---------------------------------------------------------------------
+pyWX: A Python package for accessing observational meteorological data
+----------------------------------------------------------------------
 |doi| |docs| |GitHub| |license| |pepy|
-
-.. |DOI| image:: https://zenodo.org/badge/750479733.svg
-  :target: https://zenodo.org/doi/10.5281/zenodo.10710695
 
 .. |GitHub| image:: https://img.shields.io/badge/GitHub-pywx-brightgreen.svg
    :target: https://github.com/envdes/pywx
@@ -14,11 +11,11 @@ pyWX: A Python package for obtaining observational meteorology data
 .. |license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://github.com/envdes/pywx/blob/main/LICENSE
    
-.. |pepy| image:: https://static.pepy.tech/personalized-badge/pmcpy?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads
-   :target: https://pepy.tech/project/pmcpy
+.. |pepy| image:: https://static.pepy.tech/personalized-badge/pywx?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads
+   :target: https://pepy.tech/project/pywx
 
 
-Author: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https://github.com/YuanSun-UoM/>`_, `Haofang Wang  <https://github.com/Airwhf/>`_ , `Zhiyi Song <https://github.com/onebravekid>`_, `David Topping <https://research.manchester.ac.uk/en/persons/david.topping>`_, `Zhonghua Zheng <https://zhonghuazheng.com>`_ (zhonghua.zheng@manchester.ac.uk)
+Author: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https://github.com/YuanSun-UoM/>`_, `Haofang Wang  <https://github.com/Airwhf/>`_, `Zhiyi Song <https://github.com/onebravekid>`_, `David Topping <https://research.manchester.ac.uk/en/persons/david.topping>`_, `Zhonghua Zheng <https://zhonghuazheng.com>`_ (zhonghua.zheng@manchester.ac.uk)
 
 Installation
 ------------
