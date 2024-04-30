@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK monthly historical station data &mdash; pywx v0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ISD (AWS and NOAA)" href="isd.html" />
+    <link rel="prev" title="About" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pywx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#installation">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UK monthly historical station data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="isd.html">ISD (AWS and NOAA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hadisd.html">Hadisd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location.html">ISD data with location, distance and time</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">pywx</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pywx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">UK monthly historical station data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/notebook/UK.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="UK-monthly-historical-station-data">
+<h1>UK monthly historical station data<a class="headerlink" href="#UK-monthly-historical-station-data" title="Permalink to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">source</span></code> is the same for UK-hist_station: “UK-hist_station”, “UK-hist-station”, “UK_hist_station”, “UK_hist-station”, “UK_hist_station”, “UK_hist-station”</p>
+<p>get meta <code class="docutils literal notranslate"><span class="pre">load</span></code>, if true, read the metadata as Dataframe</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywx</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># initialize the UK-hist_station source</span>
+<span class="n">met</span> <span class="o">=</span> <span class="n">pywx</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;UK-hist_station&#39;</span><span class="p">)</span>
+
+<span class="c1"># get the metadata</span>
+<span class="n">met</span><span class="o">.</span><span class="n">get_meta</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>lon</th>
+      <th>lat</th>
+      <th>Opened</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Aberporth</td>
+      <td>-4.570</td>
+      <td>52.139</td>
+      <td>1941</td>
+      <td>https://www.metoffice.gov.uk/pub/data/weather/...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Armagh</td>
+      <td>-6.649</td>
+      <td>54.352</td>
+      <td>1853</td>
+      <td>https://www.metoffice.gov.uk/pub/data/weather/...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ballypatrick Forest</td>
+      <td>-6.153</td>
+      <td>55.181</td>
+      <td>1961</td>
+      <td>https://www.metoffice.gov.uk/pub/data/weather/...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bradford</td>
+      <td>-1.772</td>
+      <td>53.813</td>
+      <td>1908</td>
+      <td>https://www.metoffice.gov.uk/pub/data/weather/...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Braemar No 2</td>
+      <td>-3.396</td>
+      <td>57.011</td>
+      <td>1959</td>
+      <td>https://www.metoffice.gov.uk/pub/data/weather/...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>meta data is originally from the UK Met Office, and is available at: <a class="reference external" href="https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data">https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data</a> .</p>
+<ul class="simple">
+<li><p>get_data <code class="docutils literal notranslate"><span class="pre">station</span></code>, station name when <code class="docutils literal notranslate"><span class="pre">pyWX(source='UK-hist_station')</span></code></p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">met</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;Armagh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Getting data from UK Historical Station
+Goto here to help select station:  https://junjieyu-uom.github.io/pywx/UK-hist-station-map
+Getting data from https://www.metoffice.gov.uk/pub/data/weather/uk/climate/stationdata/armaghdata.txt
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>yyyy [nan]</th>
+      <th>mm [nan]</th>
+      <th>tmax [degC]</th>
+      <th>tmin [degC]</th>
+      <th>af [days]</th>
+      <th>rain [mm]</th>
+      <th>sun [hours]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1853.0</td>
+      <td>1.0</td>
+      <td>---</td>
+      <td>---</td>
+      <td>---</td>
+      <td>57.3</td>
+      <td>---</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1853.0</td>
+      <td>2.0</td>
+      <td>---</td>
+      <td>---</td>
+      <td>---</td>
+      <td>32.3</td>
+      <td>---</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1853.0</td>
+      <td>3.0</td>
+      <td>---</td>
+      <td>---</td>
+      <td>---</td>
+      <td>65.5</td>
+      <td>---</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1853.0</td>
+      <td>4.0</td>
+      <td>---</td>
+      <td>---</td>
+      <td>---</td>
+      <td>46.2</td>
+      <td>---</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1853.0</td>
+      <td>5.0</td>
+      <td>---</td>
+      <td>---</td>
+      <td>---</td>
+      <td>13.2</td>
+      <td>---</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2051</th>
+      <td>2023.0</td>
+      <td>11.0</td>
+      <td>10.6</td>
+      <td>4.2</td>
+      <td>3</td>
+      <td>58.2</td>
+      <td>67.3</td>
+    </tr>
+    <tr>
+      <th>2052</th>
+      <td>2023.0</td>
+      <td>12.0</td>
+      <td>9.6</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>96.6</td>
+      <td>24.7</td>
+    </tr>
+    <tr>
+      <th>2053</th>
+      <td>2024.0</td>
+      <td>1.0</td>
+      <td>7.8</td>
+      <td>1.5</td>
+      <td>10</td>
+      <td>39.4</td>
+      <td>58.1</td>
+    </tr>
+    <tr>
+      <th>2054</th>
+      <td>2024.0</td>
+      <td>2.0</td>
+      <td>10.2</td>
+      <td>4.1</td>
+      <td>1</td>
+      <td>56.2</td>
+      <td>69.4</td>
+    </tr>
+    <tr>
+      <th>2055</th>
+      <td>2024.0</td>
+      <td>3.0</td>
+      <td>10.5</td>
+      <td>4.1</td>
+      <td>2</td>
+      <td>97.0</td>
+      <td>89.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>2055 rows × 7 columns</p>
+</div></div>
+</div>
+<p>save the data</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">met</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;Armagh&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;Armagh.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># save the data to a csv file</span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="isd.html" class="btn btn-neutral float-right" title="ISD (AWS and NOAA)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Junjie Yu, Zhonghua Zheng.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
