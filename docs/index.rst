@@ -3,13 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-pyWX: A Python package for obtaining observational meteorology data
-===================================================================
+pyWX: A Python package for accessing observational meteorological data
+======================================================================
 
 |DOI| |GitHub| |Docs| |License|
-
-.. |DOI| image:: https://zenodo.org/badge/750479733.svg
-  :target: https://zenodo.org/doi/10.5281/zenodo.10710695
 
 .. |GitHub| image:: https://img.shields.io/badge/GitHub-pywx-brightgreen.svg
    :target: https://github.com/envdes/pywx
@@ -22,7 +19,7 @@ pyWX: A Python package for obtaining observational meteorology data
 
 pyWX: A Python package for obtaining observational meteorology data
 
-Contributors: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https://github.com/YuanSun-UoM/>`_, `Haofang Wang  <https://github.com/Airwhf/>`_ , `Zhiyi Song <https://github.com/onebravekid>`_, `David Topping <https://research.manchester.ac.uk/en/persons/david.topping>`_, `Zhonghua Zheng <https://zhonghuazheng.com>`_ (zhonghua.zheng@manchester.ac.uk)
+Contributors: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https://github.com/YuanSun-UoM/>`_, `Haofang Wang  <https://github.com/Airwhf/>`_, `Zhiyi Song <https://github.com/onebravekid>`_, `David Topping <https://research.manchester.ac.uk/en/persons/david.topping>`_, `Zhonghua Zheng <https://zhonghuazheng.com>`_ (zhonghua.zheng@manchester.ac.uk)
 
 .. toctree::
    :maxdepth: 2
