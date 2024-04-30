@@ -9,7 +9,7 @@ pyWX: A Python package for obtaining observational meteorology data
    :target: https://github.com/envdes/pywx
 
 .. |Docs| image:: https://img.shields.io/badge/docs-pywx-brightgreen.svg
-   :target: https://junjieyu-uom.github.io/pywx/
+   :target: https://envdes.github.io/pywx/
 
 .. |license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://github.com/envdes/pywx/blob/main/LICENSE
