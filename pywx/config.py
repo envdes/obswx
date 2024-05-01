@@ -1,7 +1,7 @@
 config = {
     "meta": {
         "noaa": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
-        "uk": "https://raw.githubusercontent.com/JunjieYU-UoM/JunjieYU-UoM.github.io/main/_data/UK-hist-stataion-meta.csv",
+        "uk": "https://raw.githubusercontent.com/envdes/envdes.github.io/main/_data/UK-hist-stataion-meta.csv",
         "hadisd": "https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/files/hadisd_station_info_v341_202403p.txt",
     },
     "isd": {
@@ -10,9 +10,9 @@ config = {
         "hadisd" : "https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/data/hadisd.3.4.1.202403p_19310101-20240401_{}.nc.gz"
     },
     "map": {
-        "isd": "https://junjieyu-uom.github.io/pywx/isd_map",
-        "uk": "https://junjieyu-uom.github.io/pywx/UK-hist-station-map",
-        "hadisd": "https://junjieyu-uom.github.io/pywx/hadisd_map",
+        "isd": "https://envdes.github.io/pywx/isd_map",
+        "uk": "https://envdes.github.io/pywx/UK-hist-station-map",
+        "hadisd": "https://envdes.github.io/pywx/hadisd_map",
     },
 }
 

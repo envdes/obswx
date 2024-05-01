@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Junjie Yu, 2024-4-15, Manchester, UK
+# Junjie Yu, Zhonghua Zheng, 2024-05-01, Manchester, UK
 
 #import boto3
 #import botocore
@@ -7,7 +7,7 @@ import pandas as pd
 from geopy import distance
 from .config import config, source_alias
 from typing import Union
-from .other import read_hadisd
+from .utils import read_hadisd
 import urllib.request
 import os
 
@@ -104,20 +104,20 @@ class pywx:
         if self.source in source_alias["isd"]: #["ISD", "isd", "NOAA-isd", "noaa-isd", "noaa_isd", "NOAA-ISD"]:
             if print_info:
                 print("Getting data from NOAA ISD")
-                print("Goto here to help select station: ", config["map"]["isd"])
+                print("Here to help select station: ", config["map"]["isd"])
             self.resutl = self._get_isd(source=isd_source, year=year, station=station)
         
         if self.source in source_alias["hadisd"]: #["HadISD", "hadisd", "Hadisd", "HADISD", "Had-isd", "had-isd", "HAD-ISD", "Had-isd"]:
             if print_info:
                 print("Getting data from HadISD")
-                print("Goto here to help select station: ", config["map"]["hadisd"])
+                print("Here to help select station: ", config["map"]["hadisd"])
             self.resutl = self._get_isd(source=isd_source, station=station)
 
 
         if self.source in source_alias["uk"]: #["UK-hist_station", "UK-hist-station", "UK_hist_station", "UK_hist-station", "UK_hist_station", "UK_hist-station"]:
             if print_info:
                 print("Getting data from UK Historical Station")
-                print("Goto here to help select station: ", config["map"]["uk"])
+                print("Here to help select station: ", config["map"]["uk"])
             self.resutl = self._get_uk_hist(station=station)
 
         return self.resutl

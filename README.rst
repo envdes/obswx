@@ -40,7 +40,7 @@ Step 2: install using pip::
 
 How to use it?
 --------------
-python
+Python
 
 .. code-block:: python
 
@@ -56,7 +56,7 @@ python
    # get data
    met.get_data(station="Armagh")
 
-.. Please check `online documentation <https://junjieyu-uom.github.io/pywx/>`_ for more information.
+.. Please check `online documentation <https://envdes.github.io/pywx/>`_ for more information.
 
 How to ask for help
 -------------------
