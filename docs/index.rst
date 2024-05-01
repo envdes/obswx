@@ -6,7 +6,7 @@
 pyWX: A Python package for accessing observational meteorological data
 ======================================================================
 
-|DOI| |GitHub| |Docs| |License|
+|GitHub| |Docs| |License|
 
 .. |GitHub| image:: https://img.shields.io/badge/GitHub-pywx-brightgreen.svg
    :target: https://github.com/envdes/pywx
