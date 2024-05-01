@@ -13,7 +13,7 @@ pywx module
 other module
 -----------------
 
-.. automodule:: pywx.other
+.. automodule:: pywx.utils
    :members:
    :undoc-members:
    :show-inheritance:

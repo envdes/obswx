@@ -32,8 +32,8 @@ Contributors: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https
    :caption: Tutorial
 
    notebook/UK_climate.ipynb
-   notebook/ISD.ipynb
    notebook/HadISD.ipynb
+   notebook/ISD.ipynb
    notebook/location.ipynb
 
 .. toctree::
