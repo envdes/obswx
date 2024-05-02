@@ -1,4 +1,4 @@
-pywx
+obswx
 ====
 
 .. toctree::
