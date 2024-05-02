@@ -1,6 +1,6 @@
 obswx: A Python package for accessing observational meteorological data
 -----------------------------------------------------------------------
-|DOI| |docs| |GitHub| |license| |pepy|
+|DOI| |docs| |GitHub| |license|
 
 .. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.11100151.svg
   :target: https://doi.org/10.5281/zenodo.11100151
@@ -13,9 +13,6 @@ obswx: A Python package for accessing observational meteorological data
 
 .. |license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://github.com/envdes/obswx/blob/main/LICENSE
-   
-.. |pepy| image:: https://static.pepy.tech/personalized-badge/obswx?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads
-   :target: https://pepy.tech/project/obswx
 
 
 Contributors: `Junjie Yu  <https://junjieyu-uom.github.io/>`_, `Yuan Sun  <https://github.com/YuanSun-UoM/>`_, `Haofan Wang  <https://github.com/Airwhf/>`_, `Zhiyi Song <https://github.com/onebravekid>`_, `David Topping <https://research.manchester.ac.uk/en/persons/david.topping>`_, `Zhonghua Zheng <https://zhonghuazheng.com>`_ (zhonghua.zheng@manchester.ac.uk)
