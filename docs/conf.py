@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'obswx'
 copyright = '2024, Junjie Yu, Zhonghua Zheng'
 author = 'Junjie Yu, Zhonghua Zheng'
-release = 'v0.0.0'
+release = 'v0.0.1'
 
 ## -- General configuration ---------------------------------------------------
 autosummary_generate = True
