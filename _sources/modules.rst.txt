@@ -1,5 +1,5 @@
 obswx
-====
+=====
 
 .. toctree::
    :maxdepth: 4
