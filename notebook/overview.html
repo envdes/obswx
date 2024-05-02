@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About &mdash; pywx v0.0.0 documentation</title>
+  <title>About &mdash; obswx v0.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="UK monthly historical station data" href="UK_climate.html" />
-    <link rel="prev" title="pyWX: A Python package for accessing observational meteorological data" href="../index.html" /> 
+    <link rel="prev" title="obswx: A Python package for accessing observational meteorological data" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            pywx
+            obswx
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -68,7 +68,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">pywx</a>
+          <a href="../index.html">obswx</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -88,23 +88,23 @@
              
   <section id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this heading"></a></h1>
-<p>pyWX is A Python package for obtaining observational meteorology data. For now, the <a class="reference external" href="https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data">UK Historic station data</a>, NOAA Integrated Surface Database from <a class="reference external" href="https://registry.opendata.aws/noaa-isd/">AWS S3 sources</a> and <a class="reference external" href="https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database">NOAA source</a> are available for download. The package also provides tool to read in a <a class="reference external" href="https://www.metoffice.gov.uk/hadobs/hadisd/index.html">HadISD - global sub-daily station dataset</a> data.</p>
+<p>obswx is A Python package for accessing observational meteorological data. For now, the <a class="reference external" href="https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data">UK Historic station data</a>, NOAA Integrated Surface Database from <a class="reference external" href="https://registry.opendata.aws/noaa-isd/">AWS S3 sources</a> and <a class="reference external" href="https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database">NOAA source</a> are available for download. The package also provides tool to read in a <a class="reference external" href="https://www.metoffice.gov.uk/hadobs/hadisd/index.html">HadISD - global sub-daily station dataset</a> data.</p>
 </section>
 <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>Step 1: create a conda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>pywx<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11
-$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>pywx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>obswx<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11
+$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>obswx
 $<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>pandas<span class="w"> </span>xarray<span class="w"> </span>geopy
 </pre></div>
 </div>
 <p>Step 2: install using <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pywx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>obswx
 </pre></div>
 </div>
 <p>(optional) install from source::</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/JunjieYU-UoM/pywx
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>pywx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/envdes/obswx
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>obswx
 $<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
@@ -114,7 +114,7 @@ $<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="pyWX: A Python package for accessing observational meteorological data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="obswx: A Python package for accessing observational meteorological data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="UK_climate.html" class="btn btn-neutral float-right" title="UK monthly historical station data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

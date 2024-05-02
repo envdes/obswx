@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISD (AWS and NOAA) &mdash; pywx v0.0.0 documentation</title>
+  <title>ISD (AWS and NOAA) &mdash; obswx v0.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
@@ -38,7 +38,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            pywx
+            obswx
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -71,7 +71,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">pywx</a>
+          <a href="../index.html">obswx</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -96,12 +96,12 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywx</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">obswx</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># Get the metadata for the ISD dataset (AWS and NOAA)</span>
 <span class="c1"># AWS S3 bucket: https://noaa-isd-pds.s3.amazonaws.com/index.html</span>
 <span class="c1"># NOAA: https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database</span>
-<span class="n">met</span> <span class="o">=</span> <span class="n">pywx</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;ISD&#39;</span><span class="p">)</span>
+<span class="n">met</span> <span class="o">=</span> <span class="n">obswx</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;ISD&#39;</span><span class="p">)</span>
 
 <span class="c1"># Load the metadata</span>
 <span class="n">met</span><span class="o">.</span><span class="n">get_meta</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -228,7 +228,7 @@
 </ul>
 </li>
 <li><p>get_data <code class="docutils literal notranslate"><span class="pre">year</span></code>, int or str is needed when obtaining ISD</p></li>
-<li><p>get_data <code class="docutils literal notranslate"><span class="pre">station</span></code>, station name when <code class="docutils literal notranslate"><span class="pre">pywx(source='UK-hist_station')</span></code>; station id when <code class="docutils literal notranslate"><span class="pre">pywx(source='ISD')</span></code></p></li>
+<li><p>get_data <code class="docutils literal notranslate"><span class="pre">station</span></code>, station name when <code class="docutils literal notranslate"><span class="pre">obswx(source='UK-hist_station')</span></code>; station id when <code class="docutils literal notranslate"><span class="pre">obswx(source='ISD')</span></code></p></li>
 </ul>
 <p>Note! station id = ISD metadata [“USAF”] + ISD metadata[“WBAN”]; <code class="docutils literal notranslate"><span class="pre">year</span></code> must be corresponding in ISD metadata</p>
 <div class="nbinput docutils container">

@@ -116,10 +116,10 @@
     }
    ],
    "source": [
-    "from pywx import *\n",
+    "from obswx import *\n",
     "\n",
     "# initialize the UK-hist_station source\n",
-    "met = pywx(source='UK-hist_station')\n",
+    "met = obswx(source='UK-hist_station')\n",
     "\n",
     "# get the metadata\n",
     "met.get_meta(load=True).head()"
@@ -137,7 +137,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "- get_data `station`, station name when `pyWX(source='UK-hist_station')`"
+    "- get_data `station`, station name when `obswx(source='UK-hist_station')`"
    ]
   },
   {
