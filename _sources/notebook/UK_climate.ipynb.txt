@@ -129,7 +129,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "meta data is originally from the UK Met Office, and is available at:\n",
+    "metadata is from [UK-hist-stataion-meta](https://github.com/envdes/obswx/blob/main/metadata/UK-hist-stataion-meta.csv) (last access: 2024-04-30), originally from the UK Met Office, and is available at:\n",
     "https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data ."
    ]
   },

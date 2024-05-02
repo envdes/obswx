@@ -116,7 +116,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "meta data is originally from: https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/station_download.html"
+    "metadata is from [hadisd_meta.csv](https://github.com/envdes/obswx/blob/main/metadata/hadisd_meta.csv>) (last access: 2024-04-30), originally from: https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/station_download.html"
    ]
   },
   {
@@ -124,7 +124,7 @@
    "metadata": {},
    "source": [
     "- get_data `ids_source`, 'AWS' is using AWS S3 ids, isd \n",
-    "- get_data `station`, the station id in meta data\n",
+    "- get_data `station`, the station id in metadata\n",
     "- get_data `output`, optional, the path dir of output file, e.g., \"pyxw/\". By default, the file nc file will be save in current work dir."
    ]
   },
