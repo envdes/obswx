@@ -31,7 +31,7 @@
 
         // get station data from CSV file
         // fetch('https://github.com/JunjieYU-UoM/JunjieYU-UoM.github.io/blob/main/_data/UK-hist-stataion-meta.csv')
-        fetch('https://raw.githubusercontent.com/JunjieYU-UoM/JunjieYU-UoM.github.io/main/_data/UK-hist-stataion-meta.csv')
+        fetch('https://raw.githubusercontent.com/envdes/obswx/main/metadata/UK-hist-stataion-meta.csv')
             .then(response => response.text())
             .then(csvText => {
                 console.log('CSV: ', csvText); // print CSV file content in console

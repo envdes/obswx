@@ -33,8 +33,8 @@
             var bounds = map.getBounds();
             var southWest = bounds.getSouthWest();
             var northEast = bounds.getNorthEast();
-            // 读取CSV文件并解析数据
-            fetch('https://raw.githubusercontent.com/envdes/obswx/raw/main/docs/hadisd_meta.csv')
+            // read metadata from CSV file
+            fetch('https://raw.githubusercontent.com/envdes/obswx/main/metadata/hadisd_meta.csv')
                 .then(response => response.text())
                 .then(csvText => {
                     console.log(csvText); // 打印 CSV 文件内容
@@ -44,7 +44,7 @@
                         var lat = item[1];
                         var lon = item[2];
                         var elevation = item[3];
-                        // 创建标记点并添加到地图上
+                        // check if the latitude and longitude are numbers
                         if (!isNaN(lon) && !isNaN(lat)) {
 
                             if (lat > southWest.lat && lat < northEast.lat &&
