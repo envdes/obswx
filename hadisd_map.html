@@ -34,7 +34,7 @@
             var southWest = bounds.getSouthWest();
             var northEast = bounds.getNorthEast();
             // 读取CSV文件并解析数据
-            fetch('https://raw.githubusercontent.com/envdes/pywx/raw/main/docs/UK-hist-stataion-meta.csv')
+            fetch('https://raw.githubusercontent.com/envdes/obswx/raw/main/docs/hadisd_meta.csv')
                 .then(response => response.text())
                 .then(csvText => {
                     console.log(csvText); // 打印 CSV 文件内容

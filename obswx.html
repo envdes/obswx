@@ -60,8 +60,14 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">obswx</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">obswx package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#obswx-module">obswx module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-modules">other modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-obswx.obswx">obswx module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#obswx.obswx.obswx"><code class="docutils literal notranslate"><span class="pre">obswx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-obswx.utils">other modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#obswx.utils.read_hadisd"><code class="docutils literal notranslate"><span class="pre">read_hadisd()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -95,11 +101,101 @@
              
   <section id="obswx-package">
 <h1>obswx package<a class="headerlink" href="#obswx-package" title="Permalink to this heading"></a></h1>
-<section id="obswx-module">
-<h2>obswx module<a class="headerlink" href="#obswx-module" title="Permalink to this heading"></a></h2>
+<section id="module-obswx.obswx">
+<span id="obswx-module"></span><h2>obswx module<a class="headerlink" href="#module-obswx.obswx" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="obswx.obswx.obswx">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">obswx.obswx.</span></span><span class="sig-name descname"><span class="pre">obswx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ISD'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obswx.obswx.obswx" title="Permalink to this definition"></a></dt>
+<dd><p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#obswx.obswx.obswx.get_data" title="obswx.obswx.obswx.get_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data</span></code></a>(**kwargs)</p></td>
+<td><p>Get data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#obswx.obswx.obswx.get_location" title="obswx.obswx.obswx.get_location"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_location</span></code></a>(lat, lon, **kwargs)</p></td>
+<td><p>Get location of the station</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#obswx.obswx.obswx.get_meta" title="obswx.obswx.obswx.get_meta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_meta</span></code></a>(**kwargs)</p></td>
+<td><p>Get metadata</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="obswx.obswx.obswx.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obswx.obswx.obswx.get_data" title="Permalink to this definition"></a></dt>
+<dd><p>Get data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> – int, year of the data</p></li>
+<li><p><strong>station</strong> – str, station ID</p></li>
+<li><p><strong>print_info</strong> – bool, print information or not</p></li>
+<li><p><strong>isd_source</strong> – str, source of the ISD data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="obswx.obswx.obswx.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obswx.obswx.obswx.get_location" title="Permalink to this definition"></a></dt>
+<dd><p>Get location of the station</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> – int or float, latitude; list or tuple, latitude range</p></li>
+<li><p><strong>lon</strong> – int or float, longitude; list or tuple, longitude range</p></li>
+<li><p><strong>radius</strong> – int or float, distance in km</p></li>
+<li><p><strong>source</strong> – str, source of the data</p></li>
+<li><p><strong>ellipsoid</strong> – str, ellipsoid. Default is “WGS-84”, Check geopy.distance.geodesic for more options. ref: <a class="reference external" href="https://geopy.readthedocs.io/en/stable/#module-geopy.distance">https://geopy.readthedocs.io/en/stable/#module-geopy.distance</a></p></li>
+<li><p><strong>year</strong> – int, list, tuple, year of the data or range of the year</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="obswx.obswx.obswx.get_meta">
+<span class="sig-name descname"><span class="pre">get_meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obswx.obswx.obswx.get_meta" title="Permalink to this definition"></a></dt>
+<dd><p>Get metadata</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – str, source of the data</p></li>
+<li><p><strong>load</strong> – bool, load data or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="other-modules">
-<h2>other modules<a class="headerlink" href="#other-modules" title="Permalink to this heading"></a></h2>
+<section id="module-obswx.utils">
+<span id="other-modules"></span><h2>other modules<a class="headerlink" href="#module-obswx.utils" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="obswx.utils.read_hadisd">
+<span class="sig-prename descclassname"><span class="pre">obswx.utils.</span></span><span class="sig-name descname"><span class="pre">read_hadisd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obswx.utils.read_hadisd" title="Permalink to this definition"></a></dt>
+<dd><p>Read HadISD data from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Path to the file.</p></li>
+<li><p><strong>output</strong> (<em>str</em>) – Path to the output file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
