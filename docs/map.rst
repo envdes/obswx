@@ -10,7 +10,8 @@ UK historical monthly weather data
 
 Original data is from https://www.metoffice.gov.uk/research/climate/maps-and-data/historic-station-data
 
-Clike the marks to see stations information. The data (also meta data for UK-hist-stataion) used in this map is from `UK-hist-stataion-meta <https://github.com/envdes/obswx/blob/main/metadata/UK-hist-stataion-meta.csv>`_ (last access: 2024-04-30).
+Clike the marks to see stations information. The data (also metadata for UK-hist-stataion) used in this map is from `UK-hist-stataion-meta <https://github.com/envdes/obswx/blob/main/metadata/UK-hist-stataion-meta.csv>`_ (last access: 2024-04-30).
+
 .. only:: html
 
    .. raw:: html
@@ -22,7 +23,7 @@ Clike the marks to see stations information. The data (also meta data for UK-his
 HadISD station
 --------------
 
-Original data is from https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/station_download.html. The data (also meta data for HadISD) used in this map is from `hadisd_meta.csv <https://github.com/envdes/obswx/blob/main/metadata/hadisd_meta.csv>`_ (last access: 2024-04-30).
+Original data is from https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/station_download.html. The data (also metadata for HadISD) used in this map is from `hadisd_meta.csv <https://github.com/envdes/obswx/blob/main/metadata/hadisd_meta.csv>`_ (last access: 2024-04-30).
 
 .. only:: html
 
