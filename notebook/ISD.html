@@ -60,6 +60,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ISD (AWS and NOAA)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="location.html">ISD data with location, distance and time</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Maps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../map.html">Check out the avaialble stations</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">obswx</a></li>
@@ -245,7 +249,7 @@
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Getting data from NOAA ISD
-Here to help select station:  https://envdes.github.io/pywx/isd_map
+Here to help select station:  https://envdes.github.io/obswx/isd_map
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -420,6 +424,28 @@ Here to help select station:  https://envdes.github.io/pywx/isd_map
 <p>5 rows × 21 columns</p>
 </div></div>
 </div>
+<p>The headers darafrem and definition of each daily element included in the dataset (as available from each station) are as follows:</p>
+<ul>
+<li><p><strong>STATION</strong> - Station number (WMO/DATSAV3 possibly combined w/WBAN number)</p></li>
+<li><p>TEMP - Mean temperature (.1 Fahrenheit)</p></li>
+<li><p>DEWP - Mean dew point (.1 Fahrenheit)</p></li>
+<li><p>SLP - Mean sea level pressure (.1 mb)</p></li>
+<li><p>STP - Mean station pressure (.1 mb)</p></li>
+<li><p>VISIB - Mean visibility (.1 miles)</p></li>
+<li><p>WDSP – Mean wind speed (.1 knots)</p></li>
+<li><p>MXSPD - Maximum sustained wind speed (.1 knots)</p></li>
+<li><p>GUST - Maximum wind gust (.1 knots)</p></li>
+<li><p>MAX - Maximum temperature (.1 Fahrenheit)</p></li>
+<li><p>MIN - Minimum temperature (.1 Fahrenheit)</p></li>
+<li><p>PRCP - Precipitation amount (.01 inches)</p></li>
+<li><p>SNDP - Snow depth (.1 inches)</p></li>
+<li><div class="line-block">
+<div class="line">FRSHTT – Indicator for occurrence of: Fog</div>
+<div class="line">Rain or Drizzle Snow or Ice Pellets Hail Thunder Tornado/Funnel Cloud</div>
+</div>
+</li>
+</ul>
+<p>for more details of data discription, please refer to <a class="reference external" href="https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt">Readme.txt</a> and <a class="reference external" href="https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.pdf">Readme.pdf</a> from <a class="reference external" href="https://www.ncei.noaa.gov">NOAA</a>.</p>
 <p>save the data</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -436,7 +462,7 @@ Here to help select station:  https://envdes.github.io/pywx/isd_map
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Getting data from NOAA ISD
-Here to help select station:  https://envdes.github.io/pywx/isd_map
+Here to help select station:  https://envdes.github.io/obswx/isd_map
 </pre></div></div>
 </div>
 </section>
