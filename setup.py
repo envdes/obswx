@@ -16,7 +16,7 @@ with open("README.rst", "r") as fp:
 
 setup(
     name="obswx",
-    version="0.0.0",
+    version="0.0.1",
     author="Junjie Yu",
     author_email="yjj1997@live.cn",
     url="https://github.com/envdes/obswx",
