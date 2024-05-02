@@ -231,7 +231,13 @@ class obswx:
 
         print(f"Getting data from {meta['Link'].values[0]}")
 
-        return pd.read_fwf(meta['Link'].values[0], skiprows= skiprows, header=header)
+        df = pd.read_fwf(meta['Link'].values[0], skiprows= skiprows, header=0)
+
+        df.columns = df.columns + '[' + df.iloc[0].astype(str) + ']'
+        df.columns = df.columns.str.replace('[nan]', '')
+        df = df.drop(0)
+
+        return df
     
 
     def get_location(self, 
