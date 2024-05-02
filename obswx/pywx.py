@@ -12,7 +12,7 @@ import urllib.request
 import os
 
 
-class pywx:
+class obswx:
     def __init__(self, source="ISD"):
 
         self.source = source # source of data

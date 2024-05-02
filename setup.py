@@ -15,11 +15,11 @@ with open("README.rst", "r") as fp:
     long_description = fp.read()
 
 setup(
-    name="pywx",
+    name="obswx",
     version="0.0.0",
     author="Junjie Yu",
     author_email="yjj1997@live.cn",
-    url="https://github.com/envdes/pywx",
+    url="https://github.com/envdes/obswx",
     description="A Python package for accessing observational meteorological data",
     long_description=long_description,
     license="MIT",

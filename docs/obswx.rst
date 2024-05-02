@@ -1,19 +1,19 @@
-pywx package
-============
+obswx package
+=============
 
 
 
-pywx module
+obswx module
 ----------------
 
-.. automodule:: pywx.pywx
+.. automodule:: obswx.obswx
    :members:
    :undoc-members:
 
 other module
 -----------------
 
-.. automodule:: pywx.utils
+.. automodule:: obswx.utils
    :members:
    :undoc-members:
    :show-inheritance:

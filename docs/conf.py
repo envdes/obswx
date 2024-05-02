@@ -8,10 +8,10 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../pywx'))
+sys.path.insert(0, os.path.abspath('../obswx'))
 sys.path.insert(0, os.path.abspath('..'))
 
-project = 'pywx'
+project = 'obswx'
 copyright = '2024, Junjie Yu, Zhonghua Zheng'
 author = 'Junjie Yu, Zhonghua Zheng'
 release = 'v0.0.0'
