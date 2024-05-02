@@ -10,7 +10,7 @@ obswx module
    :members:
    :undoc-members:
 
-other module
+other modules
 -----------------
 
 .. automodule:: obswx.utils
