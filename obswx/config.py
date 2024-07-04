@@ -20,4 +20,5 @@ source_alias = {"isd": ["ISD", "isd", "NOAA-isd", "noaa-isd", "noaa_isd", "NOAA-
                 "hadisd": ["HadISD", "hadisd", "Hadisd", "HADISD", "Had-isd", "had-isd", "HAD-ISD", "Had-isd"],
                 "uk": ["UK-hist_station", "UK-hist-station", "UK_hist_station", "UK_hist-station", "UK_hist_station", "UK_hist-station"],
                 "aws": ["AWS", "aws", "S3", "s3"],
-                "noaa": ["NOAA", "noaa", "NOAA-isd", "noaa-isd", "noaa_isd", "NOAA-ISD"],}
+                "noaa": ["NOAA", "noaa", "NOAA-isd", "noaa-isd", "noaa_isd", "NOAA-ISD"],
+                "ghcnh": ["GHCN-H", "ghcn-h", "ghcnh", "GHCN_H", "GHCN_H", "GHCNH", "GHCNh"],}

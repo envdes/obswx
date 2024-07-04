@@ -9,6 +9,7 @@ from .config import config, source_alias
 from typing import Union
 from .utils import read_hadisd
 import urllib.request
+import requests
 import os
 
 
@@ -180,7 +181,14 @@ class obswx:
             data = pd.read_csv(filepath)
 
         if source in source_alias["hadisd"]:
-            filepath = config['isd']["hadisd"].format(self.station)
+            #filepath = config['isd']["hadisd"].format(self.station)
+            txt_url = 'https://raw.githubusercontent.com/envdes/obswx/main/config/hadisd.txt'
+            response = requests.get(txt_url)
+            if response.status_code == 200:
+                file_content = response.text.strip()
+                filepath = file_content.format(self.station)
+            else:
+                print(f'Failed to retrieve file: {response.status_code}')
             if output_path:
                 downloadfile = f"{output_path}/{self.station}.nc.gz"
             else:
