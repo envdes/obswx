@@ -1,7 +1,7 @@
 config = {
     "meta": {
         "noaa": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
-        "uk": "https://raw.githubusercontent.com/envdes/envdes.github.io/main/_data/UK-hist-stataion-meta.csv",
+        "uk": "https://raw.githubusercontent.com/envdes/obswx/main/metadata/UK-hist-stataion-meta.csv",
         "hadisd": "https://www.metoffice.gov.uk/hadobs/hadisd/v341_202403p/files/hadisd_station_info_v341_202403p.txt",
     },
     "isd": {
