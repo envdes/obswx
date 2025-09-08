@@ -81,7 +81,16 @@
 
         // update markers when the map is moved
         map.on('moveend', function() {
+            if (map.getZoom() > 6) { // only load markers if zoom level is greater than 6
             loadCityMarkers();
+            } else {
+            map.eachLayer(function (layer) {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+            }
+             // loadCityMarkers();
         });
     </script>
 <p>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map boundaries are based on OpenStreetMap data and do not imply any political stance by the author.</p>
